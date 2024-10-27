@@ -32,5 +32,11 @@ public class LoggedOut : PageModel
             ClientName = String.IsNullOrEmpty(logout?.ClientName) ? logout?.ClientId : logout?.ClientName,
             SignOutIframeUrl = logout?.SignOutIFrameUrl
         };
+
+        if (!string.IsNullOrEmpty(logout?.PostLogoutRedirectUri))
+        {
+            Response.Redirect(logout.PostLogoutRedirectUri);
+            return;
+        }        
     }
 }
