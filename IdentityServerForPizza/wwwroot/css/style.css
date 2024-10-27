@@ -1098,6 +1098,20 @@ button::-moz-focus-inner {
     cursor: pointer;
 }
 
+.field textarea:focus,
+.field select:focus,
+.field input[type="text"]:focus,
+.field input[type="tel"]:focus,
+.field input[type="email"]:focus,
+.field input[type="number"]:focus,
+.field input[type="password"]:focus,
+.field input[type="date"]:focus,
+.field input[type="datetime"]:focus,
+.field input[type="time"]:focus,
+.field .input:focus {
+    border-color: #FFBB56;
+}
+
 .field [type="submit"],
 .field button.submit,
 .field button.is--main,
